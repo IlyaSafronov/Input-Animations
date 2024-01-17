@@ -14,6 +14,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   padding: 1rem;
+  gap: 1.5rem;
 }
 
 .input-group {
@@ -47,5 +48,104 @@ input {
 
 .effect-1:focus + .border {
   width: 100%;
+}
+
+/* ! Effect 2 */
+
+.effect-2 {
+  border-bottom: 2px solid #ccc;
+  padding-left: 0;
+}
+
+.effect-2 + .border {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #4caf50;
+  transition: 0.5s;
+}
+
+.effect-2:focus + .border {
+  width: 100%;
+}
+
+/* ! Effect 3 */
+.effect-3 {
+  border-bottom: 2px solid #ccc;
+  padding-left: 0;
+}
+
+.effect-3 + .border {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) scale(0);
+  width: 100%;
+  height: 2px;
+  background-color: #4caf50;
+  transition: 0.5s;
+}
+
+.effect-3:focus + .border {
+  transform: translateX(-50%) scale(1);
+}
+
+/* ! Effect 4 */
+.effect-4 {
+  border: 2px solid #ccc;
+  border-radius: 0.25rem;
+}
+
+.effect-4 + label {
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  left: 0.75rem;
+  color: #ccc;
+  padding: 0 0.125rem;
+  transition: 0.4s;
+}
+
+.effect-4:focus {
+  border-color: #4caf50;
+}
+
+.effect-4:focus + label,
+.effect-4:not(:placeholder-shown) + label {
+  top: 0;
+  transition: 0.3s;
+  background-color: #fff;
+  color: #4caf50;
+}
+
+/*  ! Effect 5 */
+
+.effect-5 {
+  border-bottom: 2px solid #ccc;
+  padding-left: 0;
+  
+}
+
+.effect-5 + label {
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  left: 0;
+  color: #ccc;
+  transition: 0.4s;
+}
+
+.effect-5:focus {
+  border-color: #4caf50;
+}
+
+.effect-5:focus + label,
+.effect-5:not(:placeholder-shown) + label {
+  top: 0;
+  transition: 0.3s;
+  background-color: #fff;
+  color: #4caf50;
 }
 
